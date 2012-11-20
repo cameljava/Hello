@@ -18,12 +18,12 @@ public class App
     public static void main( String[] args )
     {
     	Logger logger=LoggerFactory.getLogger(App.class);
-        System.out.println( "Hello World!" );
+//        System.out.println( "Hello World!" );
         logger.info("Hello by logback.");
         
         ApplicationContext ap = new ClassPathXmlApplicationContext("spring/beans.xml");
         TestProperties testProperties = ap.getBean(TestProperties.class);
-        System.out.println("testsetst"+testProperties);
+//        System.out.println("testsetst"+testProperties);
         logger.info(testProperties.getProperty1());
     }
 }
